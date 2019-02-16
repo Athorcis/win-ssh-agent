@@ -26,7 +26,7 @@ IF "%regValue%"=="" (
 	REG ADD "%regKey%" /v "%regName%" /d "%cmdScript%" > NUL
 
 	REM On ajoute également le script bash au .bashrc
-	ECHO %bashScript%>> "%HOMEDRIVE%%HOMEPATH%\.bashrc"
+	ECHO source "%bashScript%">> "%HOMEDRIVE%%HOMEPATH%\.bashrc"
 	
 	ECHO installation terminée
 REM Si le registre contient déjà la valeur
